@@ -19,3 +19,4 @@ texture = ExtResource("1_738n7")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.952985, 0.303019, 0, -0.303019, 0.952985, 0, 2.58652, 4.14724)
+current = true

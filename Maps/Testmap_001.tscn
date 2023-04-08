@@ -33,7 +33,7 @@ mesh = SubResource("BoxMesh_tlnts")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.407315, 0.5, 1.57536)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.936636, -0.302649, 0.176401, 0.131169, 0.769935, 0.624496, -0.32482, -0.561787, 0.760846, 2.60589, 3.11966, 2.38419e-07)
+transform = Transform3D(0.92265, -0.384888, -0.024052, 0.283047, 0.633516, 0.720098, -0.26192, -0.671206, 0.693455, 2.60589, 3.11966, 2.38419e-07)
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="DirectionalLight3D"]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_fxxfb")
