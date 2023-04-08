@@ -15,15 +15,17 @@ shape = SubResource("CapsuleShape3D_f3xgu")
 
 [node name="Sprite3D" type="Sprite3D" parent="CollisionShape3D"]
 pixel_size = 0.002
-billboard = 1
+billboard = 2
+shaded = true
+alpha_cut = 2
 texture = ExtResource("1_738n7")
 
-[node name="RayCast3D" type="RayCast3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 1, 0)
-target_position = Vector3(0, 0, 4.7)
-
 [node name="rail" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 1, 0)
+
+[node name="RayCast3D" type="RayCast3D" parent="rail"]
+transform = Transform3D(1, 0, 0, 0, 1, -2.98023e-08, 0, 2.98023e-08, 1, 0, 0, 0)
+target_position = Vector3(0, 0, 4.7)
 
 [node name="Point" type="Node3D" parent="rail"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.7)
@@ -33,5 +35,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.7)
 current = true
 fov = 90.0
 script = ExtResource("3_jif3n")
-Ray = NodePath("../../RayCast3D")
+Ray = NodePath("../RayCast3D")
 Point = NodePath("../Point")
