@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://mlsghrsc7ris"]
+[gd_scene load_steps=5 format=3 uid="uid://mlsghrsc7ris"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_8g7j0"]
 [ext_resource type="Texture2D" uid="uid://bgk28pvscb55i" path="res://Assets/icon_color.png" id="1_738n7"]
+[ext_resource type="Script" path="res://Scripts/View.gd" id="3_jif3n"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_f3xgu"]
 
@@ -17,6 +18,20 @@ pixel_size = 0.002
 billboard = 1
 texture = ExtResource("1_738n7")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.952985, 0.303019, 0, -0.303019, 0.952985, 0, 2.58652, 4.14724)
+[node name="RayCast3D" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 1, 0)
+target_position = Vector3(0, 0, 4.7)
+
+[node name="rail" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 1, 0)
+
+[node name="Point" type="Node3D" parent="rail"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.7)
+
+[node name="View" type="Camera3D" parent="rail" node_paths=PackedStringArray("Ray", "Point")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.7)
 current = true
+fov = 90.0
+script = ExtResource("3_jif3n")
+Ray = NodePath("../../RayCast3D")
+Point = NodePath("../Point")
