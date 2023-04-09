@@ -20,4 +20,4 @@ func _process(delta):
 		# it also does some fancy lerping so it doesent just JUT forward
 		self.position = self.position.lerp(Vector3(0,0,CAMERA_DISTANCE - Ray.get_collision_point().distance_to(Point.global_position)), delta * LERP_SPEED)
 	else:
-		self.position.z = CAMERA_DISTANCE
+		self.position = self.position.lerp(Vector3(0,0,CAMERA_DISTANCE), delta * LERP_SPEED)
