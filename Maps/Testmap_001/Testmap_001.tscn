@@ -40,9 +40,6 @@ emission = Color(0, 1, 0, 1)
 [node name="Testmap_001" type="Node3D"]
 script = ExtResource("3_pye6e")
 
-[node name="Player" parent="." instance=ExtResource("1_6grvh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.407315, 0.5, 1.57536)
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.603918, -0.0763837, 0.793378, -0.697845, -0.531595, 0.480019, 0.38509, -0.843547, -0.374344, 2.60589, 3.11966, 2.38419e-07)
 shadow_enabled = true
@@ -85,6 +82,9 @@ size = Vector3(137.9, 5.42219, 1.80279)
 [node name="CSGBox3D5" type="CSGBox3D" parent="CSGCombiner3D"]
 transform = Transform3D(0.0901657, 0, 0, 0, 0.625878, 0, 0, 0, 1.89456, 5.29023, -0.550188, -3.71273)
 size = Vector3(137.9, 5.42219, 1.80279)
+
+[node name="Player" parent="." instance=ExtResource("1_6grvh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.407315, 0.5, 1.57536)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 11.5035, -0.107096, -2.00821)
