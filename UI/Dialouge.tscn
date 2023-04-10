@@ -341,7 +341,8 @@ _data = {
 "RESET": SubResource("Animation_vijmh")
 }
 
-[node name="Dialouge" type="Control"]
+[node name="Dialouge" type="Control" node_paths=PackedStringArray("animPlayer")]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -349,6 +350,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_kgkrh")
+animPlayer = NodePath("AnimationPlayer")
 
 [node name="OpenClose_Leo" type="NinePatchRect" parent="."]
 visible = false
@@ -359,9 +361,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -19.0
-offset_top = -40.0
-offset_right = 20.0
+offset_left = 557.0
+offset_top = 608.0
+offset_right = 596.0
+offset_bottom = 648.0
 grow_horizontal = 2
 grow_vertical = 0
 texture = ExtResource("1_u5mch")
@@ -380,10 +383,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -18.0
-offset_top = -41.0
-offset_right = 21.0
-offset_bottom = -1.0
+offset_left = 558.0
+offset_top = 607.0
+offset_right = 597.0
+offset_bottom = 647.0
 grow_horizontal = 2
 grow_vertical = 0
 texture = ExtResource("2_qedww")
@@ -394,6 +397,7 @@ patch_margin_right = 22
 patch_margin_bottom = 16
 
 [node name="Dialouge box" type="TextureProgressBar" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
