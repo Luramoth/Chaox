@@ -13,6 +13,12 @@ func open_dialouge(character:String, player:CharacterBody3D):
 		player.statue = true
 		
 		animPlayer.play("Open_leo")
+	elif (character == "Bassalt"):
+		self.visible = true
+		
+		player.statue = true
+		
+		animPlayer.play("Open_bassalt")
 
 func _on_animation_player_animation_finished(_anim_name):
-	print("yeah")
+	Dialouge_finished.emit()
